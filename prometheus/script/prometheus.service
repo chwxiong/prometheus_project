@@ -1,0 +1,13 @@
+[Unit]
+Description=Prometheus
+After=network.target
+
+[Service]
+Type=simple
+User=autowise  
+Group=autowise  
+ExecStart=/usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --web.listen-address=:9090 --log.level=info --storage.tsdb.retention.time=24h --storage.tsdb.path="/home/autowise/prometheus_logs"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

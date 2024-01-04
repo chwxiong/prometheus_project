@@ -1,0 +1,5 @@
+prometheus_client
+flask
+jetson-stats==4.2.2
+rosnode
+nvitop

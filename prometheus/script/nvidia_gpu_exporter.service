@@ -1,0 +1,12 @@
+[Unit]
+Description=GPU Exporter
+After=network.target
+
+[Service]
+User=autowise
+Group=autowise
+Type=simple
+ExecStart=/usr/local/bin/nvidia_gpu_exporter --web.listen-address=":9835"
+
+[Install]
+WantedBy=multi-user.target

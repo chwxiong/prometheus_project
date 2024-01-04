@@ -1,0 +1,12 @@
+[Unit]
+Description=Jetson GPU Exporter
+After=network.target
+
+[Service]
+User=autowise
+Group=autowise
+Type=simple
+ExecStart=python3 /usr/local/bin/nvidia_jetson_exporter.py 
+
+[Install]
+WantedBy=multi-user.target
